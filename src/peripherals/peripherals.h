@@ -58,7 +58,13 @@ constexpr pin_size_t kLED_DEFAULT_GPIO = D13;
 }  // namespace peripherals
 
 #else  // ARDUINO_ARDUINO_NANO33BLE
-#error "unsupported board"
+
+
+constexpr uint32_t kI2C_CLOCK = 100000;
+
+constexpr pin_size_t kBUTTON_GPIO = D8;
+
+constexpr pin_size_t kLED_DEFAULT_GPIO = LED_BUILTIN;
 
 #endif  // ARDUINO_ARDUINO_NANO33BLE
 

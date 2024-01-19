@@ -13,6 +13,8 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
 
+#ifdef ARDUINO_ARDUINO_NANO33BLE
+
 #undef I2S_NRF52840_DEBUG
 #undef I2S_NRF52840_DEBUG_INT
 
@@ -784,3 +786,5 @@ bool I2S_nrf52840::SameBufferSegment(const uint8_t* a, const uint8_t* b) const {
 }
 
 }  // namespace peripherals
+
+#endif
